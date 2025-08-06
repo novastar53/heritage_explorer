@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Wilson Hill",
+    "lat": 44.2423649,
+    "lng": -119.8093025,
+    "url": "https://www.google.com/maps/place//@44.2423649,-119.8093025,3z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Mohol Court Tal, Mohol",
+    "lat": 17.8090812,
+    "lng": 75.6357414,
+    "url": "https://www.google.com/maps/place/Mohol+Court+Tal,+Mohol/@17.8090812,75.6357414,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc4353f1b8a588d:0xf9eedb86c8237f93!8m2!3d17.8090812!4d75.6357414!16s%2Fg%2F11gmw0439x?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "",
+    "lat": 19.8772138,
+    "lng": 73.8080869,
+    "url": "https://www.google.com/maps/place/Barnes+School+and+Junior+College/@19.8772138,73.8080869,17z/data=!3m1!4b1!4m6!3m5!1s0x3bdd95c53e356741:0x68ac2e21d0e99be!8m2!3d19.8772138!4d73.8080869!16s%2Fm%2F0273z1n?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Dak Bungalow",
+    "lat": 27.0994928,
+    "lng": 77.668028,
+    "url": "https://www.google.com/maps/place/Dak+Bungalow/@27.0994928,77.668028,17z/data=!3m1!4b1!4m6!3m5!1s0x3973918644e6a727:0x7e65f0bb3f2a48fc!8m2!3d27.0994928!4d77.668028!16s%2Fg%2F11gk6ntmhq?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "FRI ( Forest Research Institute) Timber Museum",
+    "lat": 30.3438262,
+    "lng": 77.9978107,
+    "url": "https://www.google.com/maps/place/FRI+Dehradun/@30.3438262,77.9978107,17z/data=!3m1!4b1!4m6!3m5!1s0x3908d5f4c48d6bb7:0x6ecfe5ab716cd554!8m2!3d30.3438262!4d77.9978107!16zL20vMDZ3cjJz?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Patna Museum",
+    "lat": 25.612727,
+    "lng": 85.1332734,
+    "url": "https://www.google.com/maps/place/Patna+Museum/@25.612727,85.1332734,17z/data=!3m1!4b1!4m6!3m5!1s0x39ed58446df97609:0xa3a4580463faf378!8m2!3d25.612727!4d85.1332734!16zL20vMDdoa2Yz?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Lord Cornwallis Tomb",
+    "lat": 25.5587015,
+    "lng": 83.5457395,
+    "url": "https://www.google.com/maps/place/Cornwallis+Tomb/@25.5587015,83.5457395,17z/data=!3m1!4b1!4m6!3m5!1s0x3991fe5248471af1:0x629c67c67a81fea5!8m2!3d25.5587015!4d83.5457395!16s%2Fm%2F0_z9g0f?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Colonel Hill Pillar",
+    "lat": 14.2852858,
+    "lng": 74.4506573,
+    "url": "https://www.google.com/maps/place/Colonel+Pillar+Hill/@14.2852858,74.4506573,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbc3afe76db693f:0xb2ed664fc7620064!8m2!3d14.2852858!4d74.4506573!16s%2Fg%2F1ty72qmg?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Indian Military Academy",
+    "lat": 30.3333956,
+    "lng": 77.9800792,
+    "url": "https://www.google.com/maps/place/Indian+Military+Academy/@30.3333956,77.9800792,17z/data=!3m1!4b1!4m6!3m5!1s0x39092a7bd86982a7:0xb7293c6429694ff7!8m2!3d30.3333956!4d77.9800792!16zL20vMDg4YnE5?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "",
+    "lat": 29.8660376,
+    "lng": 77.8905116,
+    "url": "https://www.google.com/maps/place/Indian+Institute+Of+Technology+Roorkee/@29.8660376,77.8905116,17z/data=!3m1!4b1!4m6!3m5!1s0x390eb3650bfe37a7:0xa9d19b15af050467!8m2!3d29.8660376!4d77.8905116!16zL20vMDF0c2I2?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Mutiny Memorial",
+    "lat": 28.6713219,
+    "lng": 77.210762,
+    "url": "https://www.google.com/maps/place/1857+Mutiny+Memorial/@28.6713219,77.210762,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfd9dccaa2041:0x33a2ea14a3643df4!8m2!3d28.6713219!4d77.210762!16s%2Fm%2F05q92kn?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "",
+    "lat": 17.989367,
+    "lng": 74.4333779,
+    "url": "https://www.google.com/maps/place/Mudhoji+High+School+and+Junior+College/@17.989367,74.4333779,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc3a5376b10f21d:0xca122f1fb63dc59a!8m2!3d17.989367!4d74.4333779!16s%2Fg%2F1w15xw_0?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Benti Kothi",
+    "lat": 25.6742286,
+    "lng": 81.49957,
+    "url": "https://www.google.com/maps/place/Benti+Kothi/@25.6742286,81.49957,17z/data=!3m1!4b1!4m6!3m5!1s0x399b2704b8319f63:0x9c19c291cdb83f88!8m2!3d25.6742286!4d81.49957!16s%2Fg%2F11gty7wd8r?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  }
+]

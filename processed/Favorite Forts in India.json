@@ -1,0 +1,650 @@
+[
+  {
+    "name": "Fort of Bijna",
+    "lat": 44.2423649,
+    "lng": -119.8093025,
+    "url": "https://www.google.com/maps/place//@44.2423649,-119.8093025,3z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Jaisalmer Fort",
+    "lat": 26.9124555,
+    "lng": 70.9126093,
+    "url": "https://www.google.com/maps/place/Jaisalmer+Fort/@26.9124555,70.9126093,17z/data=!3m1!4b1!4m6!3m5!1s0x3947bd22886171ed:0xd4a507c4923e1973!8m2!3d26.9124555!4d70.9126093!16zL20vMGNrajV6?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Deeg Fort",
+    "lat": 27.4707785,
+    "lng": 77.3292115,
+    "url": "https://www.google.com/maps/place/Deeg+Fort,+Deeg,+Rajasthan+321203,+India/@27.4707785,77.3292115,17z/data=!3m1!4b1!4m6!3m5!1s0x3973044d84aa81b9:0x40130fd40aa949f9!8m2!3d27.4707351!4d77.3288529!16s%2Fg%2F1pv083js9?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Koteshwar Mahadev Temple Mihani",
+    "lat": 31.1575629,
+    "lng": 77.4914225,
+    "url": "https://www.google.com/maps/place/Koteshwar+Mahadev+Temple+Mihani/@31.1575629,77.4914225,17z/data=!3m1!4b1!4m6!3m5!1s0x39058dca239ff7d3:0x8bfcb87d9e41c8a1!8m2!3d31.1575629!4d77.4914225!16s%2Fg%2F11g9k4g765?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "TALLUR FORT",
+    "lat": 15.9103113,
+    "lng": 75.0183483,
+    "url": "https://www.google.com/maps/place/TALLUR+FORT/@15.9103113,75.0183483,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb8ad06a8a824ad:0x8b3ae045be0f2afc!8m2!3d15.9103113!4d75.0183483!16s%2Fg%2F11hzlyycrh?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Malthan Fort / Pawar Wada",
+    "lat": 18.8378974,
+    "lng": 74.2262834,
+    "url": "https://www.google.com/maps/place/Rajwada+Malthan+%2F+RajePawar+Rajwada/@18.8378974,74.2262834,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc32bf4c6c40d89:0xfb4a9497ba27c639!8m2!3d18.8378974!4d74.2262834!16s%2Fg%2F11jkwnvczw?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Ancient castle, Sap",
+    "lat": 17.5837947,
+    "lng": 74.2328677,
+    "url": "https://www.google.com/maps/place/Ancient+castle,+Sap/@17.5837947,74.2328677,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc3d3abf183d25f:0x867f78d4c83df047!8m2!3d17.5837947!4d74.2328677!16s%2Fg%2F11h1dnbrm0?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Orchha Fort complex",
+    "lat": 25.350675,
+    "lng": 78.6427026,
+    "url": "https://www.google.com/maps/place/Orchha+Fort/@25.350675,78.6427026,17z/data=!3m1!4b1!4m6!3m5!1s0x3977785eaaaaaaab:0xad980cf18cd2ffbe!8m2!3d25.350675!4d78.6427026!16s%2Fg%2F11byv1yfys?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Kankwari Fort",
+    "lat": 27.3324989,
+    "lng": 76.3652486,
+    "url": "https://www.google.com/maps/place/Kankwari+Fort/@27.3324989,76.3652486,17z/data=!3m1!4b1!4m6!3m5!1s0x396d7eb2963fdca7:0x45fafd124f10c3c3!8m2!3d27.3324989!4d76.3652486!16s%2Fg%2F1hc2nmf9n?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Amer Fort Jaipur",
+    "lat": 26.9854865,
+    "lng": 75.8513454,
+    "url": "https://www.google.com/maps/place/Amber+Palace/@26.9854865,75.8513454,17z/data=!3m1!4b1!4m6!3m5!1s0x396db05acbd20dfb:0x6221df6747147e2b!8m2!3d26.9854865!4d75.8513454!16zL20vMDgxanYz?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Ankai Fort",
+    "lat": 20.1878947,
+    "lng": 74.4431076,
+    "url": "https://www.google.com/maps/place/Ankai+Fort/@20.1878947,74.4431076,17z/data=!3m1!4b1!4m6!3m5!1s0x3bdc3ada90143b51:0x2873fbf2bf60fa38!8m2!3d20.1878947!4d74.4431076!16s%2Fg%2F11bxdypb4c?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Ramnagar Fort",
+    "lat": 25.2695243,
+    "lng": 83.0248913,
+    "url": "https://www.google.com/maps/place/Ramnagar+Fort+Varanasi/@25.2695243,83.0248913,17z/data=!3m1!4b1!4m6!3m5!1s0x398e31a57f4a1123:0xa2906ff69bbcc05a!8m2!3d25.2695243!4d83.0248913!16s%2Fm%2F0br__mp?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Roopgarh Fort",
+    "lat": 27.3672148,
+    "lng": 75.1815398,
+    "url": "https://www.google.com/maps/place/Roopgarh+fort/@27.3672148,75.1815398,17z/data=!3m1!4b1!4m6!3m5!1s0x396c90f39757beb7:0xfe634777741ba39e!8m2!3d27.3672148!4d75.1815398!16s%2Fg%2F11f_p2mqb1?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Narwar Fort",
+    "lat": 25.6458926,
+    "lng": 77.9043886,
+    "url": "https://www.google.com/maps/place/Narwar+Fort+%7C+%E0%A4%A8%E0%A4%B0%E0%A4%B5%E0%A4%B0+%E0%A4%95%E0%A4%BF%E0%A4%B2%E0%A4%BE/@25.6458926,77.9043886,17z/data=!3m1!4b1!4m6!3m5!1s0x3970cc962377c70d:0xe1f9f21bb39442ec!8m2!3d25.6458926!4d77.9043886!16s%2Fm%2F02q7rfk?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Kyuti fort",
+    "lat": 24.8169935,
+    "lng": 81.4565688,
+    "url": "https://www.google.com/maps/place/Keoti+Fort/@24.8169935,81.4565688,17z/data=!3m1!4b1!4m6!3m5!1s0x3984fd1ac026d565:0xbee791a65f26bcec!8m2!3d24.8169935!4d81.4565688!16s%2Fg%2F11fmmcg466?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Junagarh Fort, Bikaner",
+    "lat": 28.0219586,
+    "lng": 73.3179962,
+    "url": "https://www.google.com/maps/place/Junagarh+Fort/@28.0219586,73.3179962,17z/data=!3m1!4b1!4m6!3m5!1s0x393fdd798ad1841f:0x9356163efda8b9d6!8m2!3d28.0219586!4d73.3179962!16zL20vMGNraHg5?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Taragarh Fort",
+    "lat": 25.4506117,
+    "lng": 75.6371747,
+    "url": "https://www.google.com/maps/place/Taragarh+Fort/@25.4506117,75.6371747,17z/data=!3m1!4b1!4m6!3m5!1s0x396f093947783c33:0x73510fef291368b6!8m2!3d25.4506117!4d75.6371747!16s%2Fg%2F1yg583plb?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Badnore Fort",
+    "lat": 25.8395556,
+    "lng": 74.2793664,
+    "url": "https://www.google.com/maps/place/Badnore+Fort/@25.8395556,74.2793664,17z/data=!3m1!4b1!4m6!3m5!1s0x39690bdf51ea3b47:0x1e3b017acc2d22c2!8m2!3d25.8395556!4d74.2793664!16s%2Fg%2F11cmr0cfft?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Hindoli Fort",
+    "lat": 25.5836121,
+    "lng": 75.4991898,
+    "url": "https://www.google.com/maps/place/Hindoli+Fort/@25.5836121,75.4991898,17z/data=!3m1!4b1!4m6!3m5!1s0x396f1b66033df775:0x38249b876a2af2d!8m2!3d25.5836121!4d75.4991898!16s%2Fg%2F11csbtbbwn?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Leh Palace",
+    "lat": 34.1660308,
+    "lng": 77.5871575,
+    "url": "https://www.google.com/maps/place/Leh+Palace/@34.1660308,77.5871575,16z/data=!3m1!4b1!4m6!3m5!1s0x38fdeb150c993295:0xc41a8d83a5a327e6!8m2!3d34.1660308!4d77.5871575!16s%2Fm%2F02r1cwr?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Chehni Kothi",
+    "lat": 31.6276273,
+    "lng": 77.3580148,
+    "url": "https://www.google.com/maps/place/Chehni+Kothi/@31.6276273,77.3580148,17z/data=!3m1!4b1!4m6!3m5!1s0x3905ae0c884e3c05:0xdd6d2796807a109b!8m2!3d31.6276273!4d77.3580148!16s%2Fg%2F1hc1x1ln6?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "City Palace, Karauli",
+    "lat": 26.4957206,
+    "lng": 77.0299449,
+    "url": "https://www.google.com/maps/place/City+Palace,+Karauli/@26.4957206,77.0299449,17z/data=!3m1!4b1!4m6!3m5!1s0x397187272fffafa3:0x1a644fb25452ab7b!8m2!3d26.4957206!4d77.0299449!16s%2Fg%2F11h45s68tq?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Domkonda Fort",
+    "lat": 18.2478834,
+    "lng": 78.4357433,
+    "url": "https://www.google.com/maps/place/Domakonda+Fort/@18.2478834,78.4357433,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcc457156aaaaab:0x8f22abff2b30d3d6!8m2!3d18.2478834!4d78.4357433!16s%2Fg%2F11cn3pbgtt?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Lohagarh Fort",
+    "lat": 27.2219766,
+    "lng": 77.494295,
+    "url": "https://www.google.com/maps/place/Lohagarh+Fort/@27.2219766,77.494295,17z/data=!3m1!4b1!4m6!3m5!1s0x3973a30a849084af:0xb24240d6857ebb72!8m2!3d27.2219766!4d77.494295!16zL20vMGdscXJu?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Rajgarh Fort",
+    "lat": 24.007526,
+    "lng": 76.7352116,
+    "url": "https://www.google.com/maps/place/Rajgarh+Fort/@24.007526,76.7352116,17z/data=!3m1!4b1!4m6!3m5!1s0x397b3ecc96421135:0x7abcc5bf7249ecfe!8m2!3d24.007526!4d76.7352116!16s%2Fg%2F11f316m4jz?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Suvarnadurga Fort",
+    "lat": 17.8159553,
+    "lng": 73.084429,
+    "url": "https://www.google.com/maps/place/Suvarnadurga+Fort/@17.8159553,73.084429,17z/data=!3m1!4b1!4m6!3m5!1s0x3be9b880fbffffff:0x76371152d5c66d1b!8m2!3d17.8159553!4d73.084429!16zL20vMGNqNzNx?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Agra Fort",
+    "lat": 27.1795328,
+    "lng": 78.021112,
+    "url": "https://www.google.com/maps/place/Agra+Fort/@27.1795328,78.021112,17z/data=!3m1!4b1!4m6!3m5!1s0x397470d491343beb:0x640a5ccc94029576!8m2!3d27.1795328!4d78.021112!16zL20vMDQ3OThj?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Raisen Fort",
+    "lat": 23.3265787,
+    "lng": 77.7779322,
+    "url": "https://www.google.com/maps/place/Raisen+Fort/@23.3265787,77.7779322,17z/data=!3m1!4b1!4m6!3m5!1s0x397c184d06e73c03:0x6cdbd35a722d9cb7!8m2!3d23.3265787!4d77.7779322!16s%2Fg%2F11b76fhdt_?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Red Fort",
+    "lat": 28.6561592,
+    "lng": 77.2410203,
+    "url": "https://www.google.com/maps/place/Red+Fort/@28.6561592,77.2410203,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfce26ec085ef:0x441e32f4fa5002fb!8m2!3d28.6561592!4d77.2410203!16zL20vMDVteXN2?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Saray Fort",
+    "lat": 22.4186829,
+    "lng": 75.4905443,
+    "url": "https://www.google.com/maps/place/Saray+Fort/@22.4186829,75.4905443,17z/data=!3m1!4b1!4m6!3m5!1s0x3962437de110f4d3:0x8ac7c108a0ebc6d6!8m2!3d22.4186829!4d75.4905443!16s%2Fg%2F11t6b79c7g?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Shahar Fort",
+    "lat": 26.6070767,
+    "lng": 76.7284422,
+    "url": "https://www.google.com/maps/place/Shahar/@26.6070767,76.7284422,17z/data=!3m1!4b1!4m6!3m5!1s0x39721d6f4e9cb8b1:0x6d4c6db27ce9d9e0!8m2!3d26.6070767!4d76.7284422!16s%2Fg%2F11v3x3ptm2?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Rajgarh Palace",
+    "lat": 25.6634392,
+    "lng": 78.4593962,
+    "url": "https://www.google.com/maps/place/Rajgarh+Palace,+Datia,+Madhya+Pradesh+475661,+India/@25.6634392,78.4593962,17z/data=!3m1!4b1!4m6!3m5!1s0x39771210bdb28c41:0x2a8ada9767496760!8m2!3d25.6638534!4d78.4593868!16s%2Fg%2F11bvtd3_yr?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Mehrangarh Fort and Museum",
+    "lat": 26.2981883,
+    "lng": 73.0186098,
+    "url": "https://www.google.com/maps/place/Mehrangarh+Fort/@26.2981883,73.0186098,17z/data=!3m1!4b1!4m6!3m5!1s0x39418db7f5a4e8d5:0x91c3eb1d93338906!8m2!3d26.2981883!4d73.0186098!16zL20vMDVjX2xt?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Devgarh Fort,Sikar",
+    "lat": 27.5420057,
+    "lng": 75.1883198,
+    "url": "https://www.google.com/maps/place/Devgarh+Fort,+Sikar/@27.5420057,75.1883198,17z/data=!3m1!4b1!4m6!3m5!1s0x396cbd1d210319eb:0x9e6a0647ab94a935!8m2!3d27.5420057!4d75.1883198!16s%2Fg%2F11dxd0560k?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Garh Kundar Fort",
+    "lat": 25.4815002,
+    "lng": 78.8985816,
+    "url": "https://www.google.com/maps/place/Garh+Kundar+Fort/@25.4815002,78.8985816,17z/data=!3m1!4b1!4m6!3m5!1s0x39779109393a0831:0xb91dc85d582b2488!8m2!3d25.4815002!4d78.8985816!16s%2Fg%2F11b7xnd_x1?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "The Fort Rampura",
+    "lat": 26.3487769,
+    "lng": 79.17776,
+    "url": "https://www.google.com/maps/place/The+Fort+Rampura/@26.3487769,79.17776,17z/data=!3m1!4b1!4m9!3m8!1s0x39763d22a1de44fb:0xb12bd2e66a7bf9de!5m2!4m1!1i2!8m2!3d26.3487769!4d79.17776!16s%2Fg%2F1tjt0bc9?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Ras Fort",
+    "lat": 26.3057231,
+    "lng": 74.1943937,
+    "url": "https://www.google.com/maps/place/Ras+Fort/@26.3057231,74.1943937,17z/data=!3m1!4b1!4m6!3m5!1s0x396a2a958a327f25:0x9992de7b72b0c58f!8m2!3d26.3057231!4d74.1943937!16s%2Fg%2F11c2prs7pd?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Weir Fort",
+    "lat": 27.0165849,
+    "lng": 77.1756563,
+    "url": "https://www.google.com/maps/place/Weir+Fort,+SH+45,+Weir,+Rajasthan+321408,+India/@27.0165849,77.1756563,17z/data=!3m1!4b1!4m6!3m5!1s0x39724b231492c131:0x5e1b0479a8e3e834!8m2!3d27.0165849!4d77.1756563!16s%2Fg%2F12hkbxshv?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Gwalior Fort View Point",
+    "lat": 26.2313245,
+    "lng": 78.1694957,
+    "url": "https://www.google.com/maps/place/Gwalior+Fort/@26.2313245,78.1694957,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c68ff0a2df73:0xebff42167ed98c34!8m2!3d26.2313245!4d78.1694957!16zL20vMGNwejF0?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Piplia Fort",
+    "lat": 24.51136,
+    "lng": 75.062068,
+    "url": "https://www.google.com/maps/place/Piplia+Fort/@24.51136,75.062068,17z/data=!3m1!4b1!4m6!3m5!1s0x3965dde1cc48b4d1:0x9748f24555bf1bc1!8m2!3d24.51136!4d75.062068!16s%2Fg%2F1w0hz060?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Murud-Janjira Fort",
+    "lat": 18.2999036,
+    "lng": 72.9644331,
+    "url": "https://www.google.com/maps/place/Murud-Janjira+Fort/@18.2999036,72.9644331,17z/data=!3m1!4b1!4m6!3m5!1s0x3be8446defa9a063:0xae1f9c6ab9d9aefc!8m2!3d18.2999036!4d72.9644331!16zL20vMDgwNGY2?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "RAAS Devigarh",
+    "lat": 24.7727259,
+    "lng": 73.7493656,
+    "url": "https://www.google.com/maps/place/RAAS+Devigarh/@24.7727259,73.7493656,17z/data=!3m1!4b1!4m9!3m8!1s0x39680d14d6d46583:0x3231a780407ab74!5m2!4m1!1i2!8m2!3d24.7727259!4d73.7493656!16s%2Fm%2F05zn4f1?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Kumbhalgarh Fort Rajasthan",
+    "lat": 25.1520692,
+    "lng": 73.5911296,
+    "url": "https://www.google.com/maps/place/Kumbhalgarh+Fort/@25.1520692,73.5911296,14z/data=!3m1!4b1!4m6!3m5!1s0x39682237f6aa372b:0xa29571865cb41d01!8m2!3d25.1528239!4d73.5869983!16zL20vMDc3Z2x0?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Rajgarh Fort",
+    "lat": 24.7308968,
+    "lng": 79.9502071,
+    "url": "https://www.google.com/maps/place/Rajgarh+Fort/@24.7308968,79.9502071,17z/data=!3m1!4b1!4m6!3m5!1s0x3982fae8337ec1a1:0xaedcde0088aa3c58!8m2!3d24.7308968!4d79.9502071!16s%2Fg%2F11fy4t5v3b?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Sathin Garh",
+    "lat": 26.4548213,
+    "lng": 73.5724595,
+    "url": "https://www.google.com/maps/place/Sathin+Garh/@26.4548213,73.5724595,17z/data=!3m1!4b1!4m9!3m8!1s0x396a0fd4337e56db:0x79864bcacd52766a!5m2!4m1!1i2!8m2!3d26.4548213!4d73.5724595!16s%2Fg%2F11j8kvmblv?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Madapol Gate",
+    "lat": 23.3506121,
+    "lng": 71.6531408,
+    "url": "https://www.google.com/maps/place/Madapol+Gate/@23.3506121,71.6531408,17z/data=!3m1!4b1!4m6!3m5!1s0x395beb9237199f47:0xdcdda6faaff46634!8m2!3d23.3506121!4d71.6531408!16s%2Fg%2F11cjk35l5v?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Kittur Fort",
+    "lat": 15.6012363,
+    "lng": 74.7914123,
+    "url": "https://www.google.com/maps/place/Kittur+Fort/@15.6012363,74.7914123,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbf37f263d6ada3:0x60ea22ed0cef7424!8m2!3d15.6012363!4d74.7914123!16zL20vMDltMGR2?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Palayatha Fort",
+    "lat": 44.2423649,
+    "lng": -119.8093025,
+    "url": "https://www.google.com/maps/place//@44.2423649,-119.8093025,3z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Nipani fort",
+    "lat": 16.3995855,
+    "lng": 74.3820082,
+    "url": "https://www.google.com/maps/place/Nipani+fort/@16.3995855,74.3820082,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc0f3a8f0a0a3c9:0xda40fbb3b6d6df53!8m2!3d16.3995855!4d74.3820082!16s%2Fg%2F11fnswzxcv?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Chittor Fort .",
+    "lat": 24.8839686,
+    "lng": 74.6473548,
+    "url": "https://www.google.com/maps/place/Chittorgarh+Fort/@24.8839686,74.6473548,17z/data=!3m1!4b1!4m6!3m5!1s0x3968a0f41033ea0d:0x4ef923088d726382!8m2!3d24.8839686!4d74.6473548!16zL20vMGNnajd3?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Fort Begu (1430 AD)",
+    "lat": 24.9886001,
+    "lng": 75.0179594,
+    "url": "https://www.google.com/maps/place/Fort+Begu+(1430+AD)/@24.9886001,75.0179594,17z/data=!3m1!4b1!4m9!3m8!1s0x396f525555555555:0x788b55c290ef9228!5m2!4m1!1i2!8m2!3d24.9886001!4d75.0179594!16s%2Fg%2F12j320sz3?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Hotel Rajmahal Palace - Kanota Hotels (Near Bisalpur Dam)",
+    "lat": 25.8963435,
+    "lng": 75.4679461,
+    "url": "https://www.google.com/maps/place/Hotel+Rajmahal+Palace+-+Kanota+Hotels+(Near+Bisalpur+Dam)/@25.8963435,75.4679461,17z/data=!3m1!4b1!4m9!3m8!1s0x396ee5f81a444343:0x65d3b4cf35cbc8ab!5m2!4m1!1i2!8m2!3d25.8963435!4d75.4679461!16s%2Fg%2F126228qzp?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Sheopur Fort",
+    "lat": 25.6565796,
+    "lng": 76.6964869,
+    "url": "https://www.google.com/maps/place/Sheopur+Fort/@25.6565796,76.6964869,17z/data=!3m1!4b1!4m6!3m5!1s0x397030fb0be50ca9:0xbc35beb31d45cb11!8m2!3d25.6565796!4d76.6964869!16s%2Fg%2F11bztfhnm6?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Bahu Fort Park",
+    "lat": 32.7249255,
+    "lng": 74.8768727,
+    "url": "https://www.google.com/maps/place/Bahu+Fort+Park/@32.7249255,74.8768727,17z/data=!3m1!4b1!4m6!3m5!1s0x391e8364ae665105:0xcd135458141dab4!8m2!3d32.7249255!4d74.8768727!16s%2Fg%2F1thgfdvs?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Tatarpur Fort",
+    "lat": 27.778233,
+    "lng": 76.513961,
+    "url": "https://www.google.com/maps/place/Tatarpur+Fort/@27.778233,76.513961,17z/data=!3m1!4b1!4m6!3m5!1s0x3972a657606296ef:0x336a98dd5a1dc478!8m2!3d27.778233!4d76.513961!16s%2Fg%2F11c508x181?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Rajgarh Fort",
+    "lat": 27.2342856,
+    "lng": 76.6151867,
+    "url": "https://www.google.com/maps/place/Rajgarh+Fort/@27.2342856,76.6151867,17z/data=!3m1!4b1!4m6!3m5!1s0x39727d1efd955555:0xd05f675b935cf4cd!8m2!3d27.2342856!4d76.6151867!16s%2Fg%2F11kj9086f7?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Ancient Bath Pool",
+    "lat": 27.9608043,
+    "lng": 74.973024,
+    "url": "https://www.google.com/maps/place/Ancient+Bath+Pool/@27.9608043,74.973024,17z/data=!3m1!4b1!4m6!3m5!1s0x391357b8f7157f29:0xb7c6b51696d1cde7!8m2!3d27.9608043!4d74.973024!16s%2Fg%2F11nyc7ryqv?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Tikamgarh Fort",
+    "lat": 24.743134,
+    "lng": 78.8350791,
+    "url": "https://www.google.com/maps/place/Tikamgarh+Fort/@24.743134,78.8350791,17z/data=!3m1!4b1!4m6!3m5!1s0x39784f610594c10b:0x7eb0f37a94aa6e22!8m2!3d24.743134!4d78.8350791!16s%2Fg%2F1tgckq3s?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Indragarh Fort",
+    "lat": 25.7261297,
+    "lng": 76.1929469,
+    "url": "https://www.google.com/maps/place/Indragarh+Fort/@25.7261297,76.1929469,17z/data=!3m1!4b1!4m6!3m5!1s0x396fcc90d7c70127:0x765f5ea003556699!8m2!3d25.7261297!4d76.1929469!16s%2Fg%2F11c6cqss5v?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Rahatgarh Fort",
+    "lat": 23.7792624,
+    "lng": 78.3942197,
+    "url": "https://www.google.com/maps/place/Rahatgarh+Fort/@23.7792624,78.3942197,17z/data=!3m1!4b1!4m6!3m5!1s0x397933f3dad9c019:0xc7f3dfad5eee2dfc!8m2!3d23.7792624!4d78.3942197!16s%2Fg%2F11bzz_4ypk?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Palakkad Fort",
+    "lat": 10.7637057,
+    "lng": 76.6571215,
+    "url": "https://www.google.com/maps/place/Palakkad+Fort/@10.7637057,76.6571215,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba86dee9706765f:0xbe653c3f3ca26523!8m2!3d10.7637057!4d76.6571215!16zL20vMGIzNjBs?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Sabalgarh Fort",
+    "lat": 26.2409331,
+    "lng": 77.4068116,
+    "url": "https://www.google.com/maps/place/Sabalgarh+Fort/@26.2409331,77.4068116,17z/data=!3m1!4b1!4m6!3m5!1s0x39716d34eea5872d:0xb530432d84a1018!8m2!3d26.2409331!4d77.4068116!16s%2Fm%2F013ddkhf?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Warangal Fort",
+    "lat": 17.9568351,
+    "lng": 79.6157098,
+    "url": "https://www.google.com/maps/place/Warangal+Fort/@17.9568351,79.6157098,17z/data=!3m1!4b1!4m6!3m5!1s0x3a335b2d6dcbafe3:0x97a58bc4da2ea1c4!8m2!3d17.9568351!4d79.6157098!16s%2Fm%2F0nfvtvh?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Narsinghgarh Fort",
+    "lat": 23.7100893,
+    "lng": 77.0951089,
+    "url": "https://www.google.com/maps/place/Narsinghgarh+Fort/@23.7100893,77.0951089,17z/data=!3m1!4b1!4m6!3m5!1s0x397b7be45d07f595:0xc319e8f34ea6716e!8m2!3d23.7100893!4d77.0951089!16s%2Fg%2F11ckkr6f_r?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Nahargarh Fort",
+    "lat": 26.9401659,
+    "lng": 75.8170373,
+    "url": "https://www.google.com/maps/place/Nahargarh+Fort/@26.9401659,75.8170373,17z/data=!3m1!4b1!4m6!3m5!1s0x396db15cf347f3d1:0xaaaa6e617ae9e8b!8m2!3d26.9401659!4d75.8170373!16zL20vMGdsbGN6?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Vetal vadi Fort",
+    "lat": 20.5540625,
+    "lng": 75.6215625,
+    "url": "https://www.google.com/maps/place/Vetalwadi+Fort/@20.5540625,75.6215625,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd97e9e182bc43b:0x3f258a2c8bff8cf2!8m2!3d20.5540625!4d75.6215625!16s%2Fg%2F11bw2gtxxl?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Garh Palace",
+    "lat": 25.44882,
+    "lng": 75.635538,
+    "url": "https://www.google.com/maps/place/Garh+Palace/@25.44882,75.635538,17z/data=!3m1!4b1!4m6!3m5!1s0x396f0938f9ee6be1:0xfc7d17a2bc2428f5!8m2!3d25.44882!4d75.635538!16s%2Fg%2F1tfpsp69?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Kotah Garh",
+    "lat": 25.175408,
+    "lng": 75.830517,
+    "url": "https://www.google.com/maps/place/City+Palace+Garh,+Kota/@25.175408,75.830517,17z/data=!3m1!4b1!4m6!3m5!1s0x396f9b48032289e1:0xdd49243c84a06db3!8m2!3d25.175408!4d75.830517!16s%2Fg%2F1tmxt_gf?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Kangra Fort",
+    "lat": 32.0875196,
+    "lng": 76.2541898,
+    "url": "https://www.google.com/maps/place/Kangra+Fort/@32.0875196,76.2541898,17z/data=!3m1!4b1!4m6!3m5!1s0x391b4590bd14dd71:0xe9db7498648fff42!8m2!3d32.0875196!4d76.2541898!16zL20vMGN0eDRk?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Gagron Fort",
+    "lat": 24.6279768,
+    "lng": 76.1859755,
+    "url": "https://www.google.com/maps/place/Gagron+Fort/@24.6279768,76.1859755,17z/data=!3m1!4b1!4m6!3m5!1s0x396538b2127242c9:0xf06f2092084a6280!8m2!3d24.6279768!4d76.1859755!16s%2Fm%2F01086514?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Chanderi Fort Kirti Durg",
+    "lat": 24.7105397,
+    "lng": 78.1395557,
+    "url": "https://www.google.com/maps/place/Chanderi+Fort+Kirti+Durg/@24.7105397,78.1395557,17z/data=!3m1!4b1!4m6!3m5!1s0x3979918956836945:0xb546d0868c78ab16!8m2!3d24.7105397!4d78.1395557!16s%2Fg%2F11c554gjq_?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Padmadurg Fort",
+    "lat": 18.3221303,
+    "lng": 72.9327017,
+    "url": "https://www.google.com/maps/place/Padmadurg+Fort/@18.3221303,72.9327017,17z/data=!3m1!4b1!4m6!3m5!1s0x3be8436f9544a283:0x5996862651e158d8!8m2!3d18.3221303!4d72.9327017!16zL20vMGY2ejJm?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Korigad Fort",
+    "lat": 18.6212339,
+    "lng": 73.385737,
+    "url": "https://www.google.com/maps/place/Korigad+Fort/@18.6212339,73.385737,17z/data=!3m1!4b1!4m6!3m5!1s0x3be81cb3cd6da0ef:0x67efdfcbe539cc5b!8m2!3d18.6212339!4d73.385737!16s%2Fm%2F05f498d?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Bawal fort Shaktawat",
+    "lat": 24.6185716,
+    "lng": 74.8935601,
+    "url": "https://www.google.com/maps/place/Shaktawat+fort+Th.Bawal/@24.6185716,74.8935601,17z/data=!3m1!4b1!4m6!3m5!1s0x3966093cbfc985d1:0xa20bee3329267e93!8m2!3d24.6185716!4d74.8935601!16s%2Fg%2F11frnncpx4?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Achalpur Fort",
+    "lat": 21.2657992,
+    "lng": 77.51069,
+    "url": "https://www.google.com/maps/place/Achalpur's+Fort/@21.2657992,77.51069,17z/data=!3m1!4b1!4m6!3m5!1s0x3bd6f3c3c36ed6b3:0xd98ef17440ceec70!8m2!3d21.2657992!4d77.51069!16s%2Fg%2F11sj1t5lg2?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Fort",
+    "lat": 15.8546324,
+    "lng": 75.1240091,
+    "url": "https://www.google.com/maps/place/Munuvalli+Fort+(DEVANAGANVI's)/@15.8546324,75.1240091,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb8af373ab961d1:0xdb9c51a5bb5240c6!8m2!3d15.8546324!4d75.1240091!16s%2Fg%2F11t8ghkh9j?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Fort Vellore",
+    "lat": 12.9210886,
+    "lng": 79.129471,
+    "url": "https://www.google.com/maps/place/Vellore+Fort,+Tamil+Nadu/@12.9210886,79.129471,17z/data=!3m1!4b1!4m6!3m5!1s0x3bad38c0e6c1ab13:0xd40e80182e86caa3!8m2!3d12.9210886!4d79.129471!16s%2Fm%2F0275jxd?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Rajmachi Killa",
+    "lat": 18.8313284,
+    "lng": 73.3951504,
+    "url": "https://www.google.com/maps/place/Rajmachi+Fort/@18.8313284,73.3951504,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7fe3e5f2fc1db:0x570d853467244a2a!8m2!3d18.8313284!4d73.3951504!16s%2Fg%2F11d_29sxwg?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Rajgarh Fort",
+    "lat": 44.2423649,
+    "lng": -119.8093025,
+    "url": "https://www.google.com/maps/place//@44.2423649,-119.8093025,3z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Pratapgarh Fort",
+    "lat": 27.2493143,
+    "lng": 76.1602,
+    "url": "https://www.google.com/maps/place/Pratapgarh+Fort/@27.2493143,76.1602,17z/data=!3m1!4b1!4m6!3m5!1s0x396d75ec088ed037:0xe386d64f804d3bc!8m2!3d27.2493143!4d76.1602!16s%2Fg%2F11c60c25xf?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Moroshicha Bhairavgad Fort",
+    "lat": 19.318141,
+    "lng": 73.7142652,
+    "url": "https://www.google.com/maps/place/Moroshicha+Bhairavgad+Fort/@19.318141,73.7142652,17z/data=!3m1!4b1!4m6!3m5!1s0x3bdd6ec49e5b825f:0x5136d23277858332!8m2!3d19.318141!4d73.7142652!16s%2Fm%2F0hzn0nb?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Sindhudurg Fort",
+    "lat": 16.0433863,
+    "lng": 73.4609954,
+    "url": "https://www.google.com/maps/place/Sindhudurg+Fort/@16.0433863,73.4609954,17z/data=!3m1!4b1!4m6!3m5!1s0x3beaa82170000001:0xd9f190e26c66ce46!8m2!3d16.0433863!4d73.4609954!16zL20vMDk3YzQz?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Parwadi Fort \u092a\u093e\u0930\u0935\u0921\u0940 \u0915\u093f\u0932\u094d\u0932\u093e \u091b\u0924\u094d\u0930\u092a\u0924\u0940 \u0936\u093f\u0935\u093e\u091c\u0940 \u092e\u0939\u093e\u0930\u093e\u091c",
+    "lat": 18.2811308,
+    "lng": 74.6500635,
+    "url": "https://www.google.com/maps/place/Parwadi+Fort/@18.2811308,74.6500635,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc37385c08556f9:0xb66b4e151d142f65!8m2!3d18.2811308!4d74.6500635!16s%2Fg%2F11f4lb2nc9?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Fatehpur Sikri Fort",
+    "lat": 27.0966511,
+    "lng": 77.6662434,
+    "url": "https://www.google.com/maps/place/Fatehpur+Sikri+Fort/@27.0966511,77.6662434,16z/data=!3m1!4b1!4m6!3m5!1s0x397393fd030fffff:0x75aefa4abef7bb0c!8m2!3d27.0966511!4d77.6662434!16s%2Fg%2F11b5wnqyjy?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Shaniwar Wada",
+    "lat": 18.5195841,
+    "lng": 73.8554208,
+    "url": "https://www.google.com/maps/place/Shaniwar+Wada/@18.5195841,73.8554208,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2c1e2226b7b11:0xa4bb8106175ca68b!8m2!3d18.5195841!4d73.8554208!16zL20vMDJ6aDh2?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Nawab Zaman Khan Fort",
+    "lat": 33.8790375,
+    "lng": 70.7949844,
+    "url": "https://www.google.com/maps/place/Nawab+Zaman+Khan+Fort/@33.8790375,70.7949844,17z/data=!3m1!4b1!4m6!3m5!1s0x38d9c78aa6cd02af:0x55cdacab9bdd8dbe!8m2!3d33.8790375!4d70.7949844!16s%2Fg%2F11kqj72gty?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "BALDEOGARH FORT",
+    "lat": 24.7543291,
+    "lng": 79.0664722,
+    "url": "https://www.google.com/maps/place/Baldeogarh+Fort/@24.7543291,79.0664722,17z/data=!3m1!4b1!4m6!3m5!1s0x397869084e5bd2a3:0xbb163b69fc9bd264!8m2!3d24.7543291!4d79.0664722!16s%2Fg%2F11c6rx1g06?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Raigad Fort",
+    "lat": 18.2334679,
+    "lng": 73.4406903,
+    "url": "https://www.google.com/maps/place/Raigad+Fort/@18.2334679,73.4406903,17z/data=!3m1!4b1!4m6!3m5!1s0x3be8283eb38b1ce5:0xfc31826ad34a5b70!8m2!3d18.2334679!4d73.4406903!16zL20vMDQwbDdn?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Auwa fort",
+    "lat": 25.6278203,
+    "lng": 73.6356188,
+    "url": "https://www.google.com/maps/place/Auwa+fort/@25.6278203,73.6356188,17z/data=!3m1!4b1!4m6!3m5!1s0x3969d104a4952081:0x5e811552768dda7e!8m2!3d25.6278203!4d73.6356188!16s%2Fg%2F11q2280pd5?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "",
+    "lat": 25.5077805,
+    "lng": 74.6752682,
+    "url": "https://www.google.com/maps/place/Banera's+fort/@25.5077805,74.6752682,17z/data=!3m1!4b1!4m6!3m5!1s0x3968dd2e83cd8d3d:0x64b0d32000659171!8m2!3d25.5077805!4d74.6752682!16s%2Fg%2F11h1k3hj8l?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Lohgad Fort",
+    "lat": 18.7072604,
+    "lng": 73.4778285,
+    "url": "https://www.google.com/maps/place/Lohgad+Fort/@18.7072604,73.4778285,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2a9e6015c05c3:0x9fc1499824758194!8m2!3d18.7072604!4d73.4778285!16s%2Fg%2F12vr6xcyy?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Kurumbera Fort",
+    "lat": 22.0878236,
+    "lng": 87.2551145,
+    "url": "https://www.google.com/maps/place/Kurumbera+Fort/@22.0878236,87.2551145,17z/data=!3m1!4b1!4m6!3m5!1s0x3a1d3db10658f73f:0xb6dffb5053850fad!8m2!3d22.0878236!4d87.2551145!16s%2Fm%2F0gffxbr?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Sirohi Fort",
+    "lat": 24.8867585,
+    "lng": 72.866502,
+    "url": "https://www.google.com/maps/place/Sirohi+Fort/@24.8867585,72.866502,17z/data=!3m1!4b1!4m6!3m5!1s0x3942db528d08e2dd:0x9c19a798fc35eea1!8m2!3d24.8867585!4d72.866502!16s%2Fg%2F11hy_q62ss?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Chandragad fort",
+    "lat": 16.3881388,
+    "lng": 77.7135777,
+    "url": "https://www.google.com/maps/place/Chandragad+fort/@16.3881388,77.7135777,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc9ef957a92c741:0xc7bf0256fa61d6ee!8m2!3d16.3881388!4d77.7135777!16s%2Fg%2F11jylj78_3?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Kotgarh Fort",
+    "lat": 22.0505818,
+    "lng": 82.43428,
+    "url": "https://www.google.com/maps/place/Kotgarh+Fort/@22.0505818,82.43428,17z/data=!3m1!4b1!4m6!3m5!1s0x3a27c3ce8779842f:0x5258b1845e3e00df!8m2!3d22.0505818!4d82.43428!16s%2Fg%2F11h2g3_x52?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Kalinjar Fort",
+    "lat": 25.0013103,
+    "lng": 80.4807865,
+    "url": "https://www.google.com/maps/place/Kalinjar+Fort/@25.0013103,80.4807865,17z/data=!3m1!4b1!4m6!3m5!1s0x39834038f85a54ad:0xbe24641e72d48e5d!8m2!3d25.0013103!4d80.4807865!16zL20vMDRwc2Ri?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "BIKAMPUR FORT",
+    "lat": 27.7470818,
+    "lng": 72.1435988,
+    "url": "https://www.google.com/maps/place/BIKAMPUR+FORT/@27.7470818,72.1435988,17z/data=!3m1!4b1!4m6!3m5!1s0x393f458ac5431b95:0x9e5888a2fa0cec98!8m2!3d27.7470818!4d72.1435988!16s%2Fg%2F11c1wsccxr?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Sitamau Fort",
+    "lat": 24.0141359,
+    "lng": 75.3539631,
+    "url": "https://www.google.com/maps/place/Sitamau+Fort/@24.0141359,75.3539631,17z/data=!3m1!4b1!4m6!3m5!1s0x3964491b69436ee1:0xc6e97cc6aa0717a3!8m2!3d24.0141359!4d75.3539631!16s%2Fg%2F11jv68y8m7?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Savadatti fort",
+    "lat": 15.7680109,
+    "lng": 75.1131606,
+    "url": "https://www.google.com/maps/place/Savadatti+fort/@15.7680109,75.1131606,17z/data=!3m1!4b1!4m6!3m5!1s0x3bb8b0e351893c63:0xbb8e5c9195f35aa1!8m2!3d15.7680109!4d75.1131606!16s%2Fg%2F11cnc8zlnx?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Markandya Fort",
+    "lat": 20.3849583,
+    "lng": 73.9257239,
+    "url": "https://www.google.com/maps/place/Markandya+Fort/@20.3849583,73.9257239,17z/data=!3m1!4b1!4m6!3m5!1s0x3bde75d2f19780d3:0xa5570c4ddb313b46!8m2!3d20.3849583!4d73.9257239!16s%2Fg%2F1tdkw40w?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Shri Maheshwar Fort",
+    "lat": 22.1697616,
+    "lng": 75.5870741,
+    "url": "https://www.google.com/maps/place/Shri+Maheshwar+Fort/@22.1697616,75.5870741,17z/data=!3m1!4b1!4m6!3m5!1s0x396264ce1399e145:0x1a6035c8cbbf3b99!8m2!3d22.1697616!4d75.5870741!16s%2Fg%2F1td2f9fy?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Rangmahal",
+    "lat": 20.3301037,
+    "lng": 74.2452464,
+    "url": "https://www.google.com/maps/place/Rangmahal/@20.3301037,74.2452464,17z/data=!3m1!4b1!4m6!3m5!1s0x3bdc2ae659a1c87b:0xe48205e5c1201a0f!8m2!3d20.3301037!4d74.2452464!16s%2Fg%2F11c5xg62s8?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "TodaRaisingh Mahal.",
+    "lat": 26.0200406,
+    "lng": 75.4878401,
+    "url": "https://www.google.com/maps/place/TodaRaisingh+%E0%A4%AE%E0%A4%B9%E0%A4%B2/@26.0200406,75.4878401,17z/data=!3m1!4b1!4m6!3m5!1s0x396eed0496e46415:0x344885340334b4ed!8m2!3d26.0200406!4d75.4878401!16s%2Fg%2F11fxt_csvp?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Thirumayam Fort",
+    "lat": 10.2475984,
+    "lng": 78.7506749,
+    "url": "https://www.google.com/maps/place/Thirumayam+Fort/@10.2475984,78.7506749,17z/data=!3m1!4b1!4m6!3m5!1s0x3b007b5438c77865:0xdfa56b8bc6c4c773!8m2!3d10.2475984!4d78.7506749!16s%2Fm%2F0gx0qyz?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Madhugiri Betta",
+    "lat": 13.651554,
+    "lng": 77.2000587,
+    "url": "https://www.google.com/maps/place/Madhugiri+Betta/@13.651554,77.2000587,15z/data=!3m1!4b1!4m6!3m5!1s0x3bb1b4b6684ace81:0xcae3b084029ad7a7!8m2!3d13.6515542!4d77.2000587!16s%2Fg%2F1tftvdpk?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Aanjna fort",
+    "lat": 25.5274755,
+    "lng": 73.9598637,
+    "url": "https://www.google.com/maps/place/Aanjna+fort/@25.5274755,73.9598637,17z/data=!3m1!4b1!4m6!3m5!1s0x3969b32f9d63dd57:0x8c1a9a1b2f000911!8m2!3d25.5274755!4d73.9598637!16s%2Fg%2F11qn60tm4b?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "",
+    "lat": 33.0770821,
+    "lng": 74.8340813,
+    "url": "https://www.google.com/maps/place/3RGM%2BRJP,+Marhi,+182311/@33.0770821,74.8340813,17z/data=!3m1!4b1!4m6!3m5!1s0x391e70fbc25ea04f:0xa46bf5c8372e3ec7!8m2!3d33.0770821!4d74.8340813!16s%2Fg%2F1_lx6wzb?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
+    "name": "Gandikota Fort",
+    "lat": 14.8150367,
+    "lng": 78.2831132,
+    "url": "https://www.google.com/maps/place/Gandikota+Fort,+Gandikota,+Andhra+Pradesh+516434,+India/@14.8150367,78.2831132,16z/data=!3m1!4b1!4m6!3m5!1s0x3bb40b5068eab881:0xbafcf0fa4c6e29c7!8m2!3d14.8146912!4d78.2832069!16s%2Fg%2F12jf3b64m?entry=ttu&g_ep=EgoyMDI1MDgwMy4wIKXMDSoASAFQAw%3D%3D"
+  }
+]
