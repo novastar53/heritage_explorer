@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Saved Places</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>World Map Locations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
   <style>
     #map {
       height: 100vh;
@@ -14,49 +17,39 @@
 <body>
   <div id="map"></div>
 
-  <!-- Load Google Maps JS API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key="AIzaSyDZQeULXlE3c1e0VTqr-2PAy5Mi0uG0TNU"></script>
-  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Fetch and Display Locations -->
   <script>
-    async function initMap() {
-      // Load your GeoJSON file
-      const response = await fetch('saved_places.geojson');
-      const data = await response.json();
+    // Initialize the map
+    const map = L.map('map').setView([20, 0], 2); // Center on world
 
-      // Center map on the first point, fallback to world view
-      const firstFeature = data.features[0];
-      const center = firstFeature
-        ? { lat: firstFeature.geometry.coordinates[1], lng: firstFeature.geometry.coordinates[0] }
-        : { lat: 20, lng: 0 };
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
 
-      // Create map
-      const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 3,
-        center: center,
-      });
-
-      // Info window for popups
-      const infoWindow = new google.maps.InfoWindow();
-
-      // Add markers
-      data.features.forEach(feature => {
-        const coords = feature.geometry.coordinates;
-        const marker = new google.maps.Marker({
-          position: { lat: coords[1], lng: coords[0] },
-          map: map,
-          title: feature.properties.name
+    // Load JSON file
+    fetch('processed/forts of india.json')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(loc => {
+          L.marker([loc.lat, loc.lng])
+            .addTo(map)
+            .bindPopup(`
+  <div style="max-width:250px">
+    <h3>${loc.name}</h3>
+    <div style="display: flex; gap: 5px; margin-bottom: 5px;">
+      <img src="https://picsum.photos/seed/pic1/128/128" alt="Photo 1" style="width:128px; height:128px; object-fit:cover;">
+      <img src="https://picsum.photos/seed/pic2/128/128" alt="Photo 2" style="width:128px; height:128px; object-fit:cover;">
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna.</p>
+    <a href="details.html?id=${encodeURIComponent(loc.name)}" target="_blank">View Details</a>
+  </div>
+`)
         });
-
-        marker.addListener("click", () => {
-          infoWindow.setContent(
-            `<b>${feature.properties.name}</b><br>${feature.properties.address}`
-          );
-          infoWindow.open(map, marker);
-        });
-      });
-    }
-
-    initMap();
+      })
+      .catch(error => console.error('Error loading JSON:', error));
   </script>
 </body>
 </html>
