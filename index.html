@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Saved Places</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Load Google Maps JS API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key="AIzaSyDZQeULXlE3c1e0VTqr-2PAy5Mi0uG0TNU"></script>
+  
+  <script>
+    async function initMap() {
+      // Load your GeoJSON file
+      const response = await fetch('saved_places.geojson');
+      const data = await response.json();
+
+      // Center map on the first point, fallback to world view
+      const firstFeature = data.features[0];
+      const center = firstFeature
+        ? { lat: firstFeature.geometry.coordinates[1], lng: firstFeature.geometry.coordinates[0] }
+        : { lat: 20, lng: 0 };
+
+      // Create map
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 3,
+        center: center,
+      });
+
+      // Info window for popups
+      const infoWindow = new google.maps.InfoWindow();
+
+      // Add markers
+      data.features.forEach(feature => {
+        const coords = feature.geometry.coordinates;
+        const marker = new google.maps.Marker({
+          position: { lat: coords[1], lng: coords[0] },
+          map: map,
+          title: feature.properties.name
+        });
+
+        marker.addListener("click", () => {
+          infoWindow.setContent(
+            `<b>${feature.properties.name}</b><br>${feature.properties.address}`
+          );
+          infoWindow.open(map, marker);
+        });
+      });
+    }
+
+    initMap();
+  </script>
+</body>
+</html>
