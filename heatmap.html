@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Heatmap</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; }
+    #map { height: 85vh; width: 100%; }
+    .controls { padding: 8px; display:flex; gap:12px; align-items:center; background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+    .controls label { font-size: 14px; }
+    .controls input[type=range] { width: 150px; }
+  </style>
+</head>
+<body>
+  <div class="controls">
+    <label>Show: <select id="displayMode"><option value="heat">Heatmap</option><option value="markers">Markers</option></select></label>
+    <label>Radius: <input id="radius" type="range" min="5" max="50" value="25"></label>
+    <label>Blur: <input id="blur" type="range" min="1" max="30" value="15"></label>
+  <label>Intensity scale: <input id="scale" type="range" min="0.1" max="2" step="0.1" value="1"></label>
+  <label>Opacity: <input id="heatOpacity" type="range" min="0" max="1" step="0.05" value="0.95"></label>
+    <div style="margin-left:auto; font-size:13px; color:#555">Data: <strong>processed/old_hindu_temples.json</strong></div>
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+  <script>
+    // Map setup
+    const map = L.map('map').setView([22, 78], 5);
+
+    // Use a plain/minimal basemap (CartoDB Positron)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(map);
+
+    // Controls
+    const radiusInput = document.getElementById('radius');
+    const blurInput = document.getElementById('blur');
+    const scaleInput = document.getElementById('scale');
+    const heatOpacity = document.getElementById('heatOpacity');
+    const displayMode = document.getElementById('displayMode');
+
+    // Holders for layers
+    let heatLayer = null;
+    const markersLayer = L.layerGroup();
+
+    // Helper to create heat layer from points and options
+    function createHeat(points, options) {
+      if (heatLayer) map.removeLayer(heatLayer);
+      heatLayer = L.heatLayer(points, options);
+      if (displayMode.value === 'heat') heatLayer.addTo(map);
+      // Apply opacity to the underlying canvas if available
+      try {
+        if (heatLayer && heatLayer._canvas && heatOpacity) {
+          heatLayer._canvas.style.opacity = String(heatOpacity.value);
+        }
+      } catch (e) {
+        // ignore if internal API differs
+        console.warn('Could not set heat layer opacity directly', e);
+      }
+    }
+
+    // Load data (adjust filename if you want a different dataset)
+    const dataFile = 'processed/silk road.json';
+
+    fetch(dataFile)
+      .then(r => r.json())
+      .then(data => {
+        // Convert to heat points; supports optional 'weight' field
+        const points = data.map(item => [item.lat || item.latitude || item.LAT || item.latitude, item.lng || item.lon || item.longitude || item.LNG || item.lngitude, (item.weight || 0.5)]).filter(p => p[0] && p[1]);
+
+        // Add markers to markersLayer
+        data.forEach(item => {
+          const lat = item.lat || item.latitude || item.LAT || item.latitude;
+          const lng = item.lng || item.lon || item.longitude || item.LNG || item.lngitude;
+          if (!lat || !lng) return;
+          // Use a small blue circle marker (dot)
+          const mk = L.circleMarker([lat, lng], {
+            radius: 6,
+            fillColor: '#1976d2', // blue
+            color: '#0b57a4',     // stroke color
+            weight: 1,
+            opacity: 1,
+            fillOpacity: 0.95
+          });
+          const name = item.name || item.title || item.place || 'Location';
+          mk.bindPopup(`<strong>${name}</strong>`);
+          markersLayer.addLayer(mk);
+        });
+
+        // Create initial heat layer
+        createHeat(points, { radius: Number(radiusInput.value), blur: Number(blurInput.value), maxZoom: 17, gradient: {0.2:'blue',0.4:'lime',0.6:'orange',0.8:'red'} });
+
+        // Wire up display mode
+        displayMode.addEventListener('change', () => {
+          if (displayMode.value === 'heat') {
+            if (markersLayer) map.removeLayer(markersLayer);
+            if (heatLayer) heatLayer.addTo(map);
+          } else {
+            if (heatLayer) map.removeLayer(heatLayer);
+            markersLayer.addTo(map);
+          }
+        });
+
+        // Wire sliders to update heat layer
+        function updateHeat() {
+          const scale = Number(scaleInput.value);
+          const adjustedPoints = points.map(p => [p[0], p[1], (p[2] || 0.5) * scale]);
+          createHeat(adjustedPoints, { radius: Number(radiusInput.value), blur: Number(blurInput.value), maxZoom: 17, gradient: {0.2:'blue',0.4:'lime',0.6:'orange',0.8:'red'} });
+        }
+
+        radiusInput.addEventListener('input', updateHeat);
+        blurInput.addEventListener('input', updateHeat);
+        scaleInput.addEventListener('input', updateHeat);
+        // Live update heat opacity
+        heatOpacity.addEventListener('input', () => {
+          if (heatLayer && heatLayer._canvas) {
+            heatLayer._canvas.style.opacity = String(heatOpacity.value);
+          }
+        });
+
+      })
+      .catch(err => {
+        console.error('Failed to load data file', dataFile, err);
+        const info = L.control({position:'topright'});
+        info.onAdd = function () {
+          const el = L.DomUtil.create('div', 'info');
+          el.style.padding = '6px'; el.style.background = 'white'; el.style.boxShadow = '0 1px 4px rgba(0,0,0,0.2)';
+          el.innerHTML = `<strong>Error loading ${dataFile}</strong><br/>Check console for details.`;
+          return el;
+        };
+        info.addTo(map);
+      });
+  </script>
+</body>
+</html>
