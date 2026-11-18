@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Heritage Explorer</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 8px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: #f6f4ef; color: #2a2622;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { background: #191715; color: #e8e4de; }
+    .card { background: #232019; border-color: #3a352c; }
+  }
+  h1 { font-weight: 650; letter-spacing: -0.02em; margin: 0; font-size: 2rem; }
+  .sub { margin: 0 0 24px; color: #8a8177; }
+  .cards { display: flex; flex-direction: column; gap: 14px; width: min(420px, 90vw); }
+  .card {
+    display: block; padding: 18px 20px; border-radius: 12px; text-decoration: none;
+    background: #fffdf8; border: 1px solid #e2dccd; box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    color: inherit; transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,0.12); }
+  .card .title { font-size: 1.15rem; font-weight: 600; }
+  .card .desc { font-size: 0.88rem; color: #8a8177; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <h1>Heritage Explorer</h1>
+  <p class="sub" id="count">Indian heritage sites, mapped</p>
+  <div class="cards">
+    <a class="card" href="explorer.html">
+      <div class="title">Explorer</div>
+      <div class="desc">All lists combined — filter by category, search, heatmap or clustered markers, near-me radius, dark mode. Click any marker for details and photos.</div>
+    </a>
+  </div>
+<script>
+  fetch('processed/all.json')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(d => { document.getElementById('count').textContent =
+      `${d.length.toLocaleString()} heritage sites, mapped — collected from Google Maps lists`; })
+    .catch(() => {});
+</script>
+</body>
+</html>

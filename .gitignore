@@ -1,0 +1,4 @@
+api_key.txt
+places_cache.json
+__pycache__/
+.DS_Store

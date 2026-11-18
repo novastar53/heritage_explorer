@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Heritage Explorer</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" integrity="sha384-pmjIAcz2bAn0xukfxADbZIb3t8oRT9Sv0rvO+BR5Csr6Dhqq+nZs59P0pPKQJkEV" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" integrity="sha384-wgw+aLYNQ7dlhK47ZPK7FRACiq7ROZwgFNg0m04avm4CaXS+Z9Y7nMu8yNjBKYC+" crossorigin="anonymous" />
+<style>
+  :root {
+    --bar-bg: #ffffff;
+    --bar-fg: #222222;
+    --bar-border: #e0e0e0;
+  }
+  body.dark {
+    --bar-bg: #1e1e1e;
+    --bar-fg: #e8e8e8;
+    --bar-border: #3a3a3a;
+  }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+         background: var(--bar-bg); color: var(--bar-fg); }
+  #map { height: 100vh; width: 100%; }
+
+  .controls { position: absolute; z-index: 1000; top: 10px; left: 10px; right: 10px;
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    background: var(--bar-bg); color: var(--bar-fg); opacity: 0.96;
+    padding: 8px 10px; border-radius: 8px; border: 1px solid var(--bar-border);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.25); font-size: 13px; }
+  .controls label { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+  .controls input[type=range] { width: 110px; }
+  .controls input[type=text] { width: 170px; padding: 4px 6px; border: 1px solid var(--bar-border);
+    border-radius: 4px; background: var(--bar-bg); color: var(--bar-fg); }
+  .controls select, .controls button { padding: 4px 8px; border: 1px solid var(--bar-border); border-radius: 4px;
+    background: var(--bar-bg); color: var(--bar-fg); cursor: pointer; font-size: 13px; }
+  .controls button:hover { filter: brightness(0.92); }
+  body.dark .controls button:hover { filter: brightness(1.25); }
+  .spacer { flex: 1; }
+  #count { font-size: 12px; color: #777; }
+  body.dark #count { color: #aaa; }
+
+  #catPanel { position: absolute; z-index: 1000; top: 56px; left: 10px; max-height: 60vh; overflow-y: auto;
+    background: var(--bar-bg); color: var(--bar-fg); border: 1px solid var(--bar-border); border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.25); padding: 8px 10px; font-size: 13px; display: none; }
+  #catPanel.open { display: block; }
+  #catPanel .cat-row { display: flex; align-items: center; gap: 7px; padding: 2px 0; white-space: nowrap; }
+  #catPanel .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+  #catPanel .cat-links { margin-bottom: 6px; font-size: 12px; }
+  #catPanel .cat-links a { color: #1976d2; cursor: pointer; margin-right: 10px; }
+
+  .legend { background: var(--bar-bg); color: var(--bar-fg); padding: 8px 10px; border-radius: 6px;
+    border: 1px solid var(--bar-border); box-shadow: 0 1px 4px rgba(0,0,0,0.2); font-size: 12px; max-width: 220px; }
+  .legend-title { font-weight: 600; margin-bottom: 6px; }
+  .legend-bar { width: 160px; height: 10px; border-radius: 3px;
+    background: linear-gradient(to right, #0b3d91 0%, #0b7b7b 25%, #336600 50%, #b8860b 75%, #7b0000 100%); }
+  .legend-labels { display: flex; justify-content: space-between; margin-top: 4px; }
+  .legend .cat-row { display: flex; align-items: center; gap: 6px; padding: 1px 0; }
+  .legend .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+
+  body.dark .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9) saturate(0.35);
+  }
+
+  .leaflet-popup-content { font-size: 13px; }
+
+  /* Details panel */
+  #detailsPanel { position: absolute; z-index: 1100; top: 0; right: 0; height: 100%;
+    width: min(380px, 92vw); background: var(--bar-bg); color: var(--bar-fg);
+    border-left: 1px solid var(--bar-border); box-shadow: -2px 0 12px rgba(0,0,0,0.25);
+    transform: translateX(105%); transition: transform 0.2s ease; overflow-y: auto;
+    box-sizing: border-box; padding: 14px 16px 20px; }
+  #detailsPanel.open { transform: none; }
+  #detailsClose { position: absolute; top: 8px; right: 10px; border: none; background: none;
+    color: var(--bar-fg); font-size: 22px; line-height: 1; cursor: pointer; opacity: 0.6; }
+  #detailsClose:hover { opacity: 1; }
+  .wiki-extract { font-size: 13px; line-height: 1.55; margin: 10px 0; }
+  .photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; margin-top: 8px; }
+  .photo-grid img { width: 100%; height: 120px; object-fit: cover; border-radius: 6px; display: block; }
+  .photo-credit { font-size: 11px; color: #999; margin-top: 10px; }
+  .map-embed { width: 100%; height: 230px; border: 0; border-radius: 8px; margin-top: 6px; display: block; }
+  .popup-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .popup-note { color: #666; margin: 4px 0; }
+  .chip { display: inline-block; border-radius: 8px; padding: 1px 7px; font-size: 11px; margin: 2px 2px 0 0;
+    color: #fff; }
+</style>
+</head>
+<body>
+<div class="controls">
+  <button id="catToggle">Categories ▾</button>
+  <label>Display <select id="displayMode">
+    <option value="heat">Heatmap</option>
+    <option value="markers">Markers</option>
+  </select></label>
+  <label>Weight <select id="weightMode" title="How heat intensity is weighted">
+    <option value="uniform">Uniform</option>
+    <option value="crosslist">Cross-list boost</option>
+  </select></label>
+  <label>Radius <input id="radius" type="range" min="5" max="50" value="25"></label>
+  <label>Blur <input id="blur" type="range" min="1" max="30" value="15"></label>
+  <label>Intensity <input id="scale" type="range" min="0.1" max="2" step="0.1" value="1"></label>
+  <label>Opacity <input id="heatOpacity" type="range" min="0" max="1" step="0.05" value="1"></label>
+  <input id="search" type="text" placeholder="Search by name…" />
+  <label>Near me <select id="nearKm">
+    <option value="0">off</option><option value="50">50 km</option><option value="100">100 km</option>
+    <option value="250">250 km</option><option value="500">500 km</option>
+  </select></label>
+  <button id="locateBtn" title="Use my location">📍</button>
+  <button id="darkBtn" title="Toggle dark basemap">🌙</button>
+  <div class="spacer"></div>
+  <span id="count"></span>
+</div>
+
+<div id="catPanel"></div>
+<div id="detailsPanel"><button id="detailsClose" title="Close">×</button><div id="detailsBody"></div></div>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js" integrity="sha384-mFKkGiGvT5vo1fEyGCD3hshDdKmW3wzXW/x+fWriYJArD0R3gawT6lMvLboM22c0" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin="anonymous"></script>
+<script>
+'use strict';
+
+// ---------- Map setup ----------
+const map = L.map('map');
+map.createPane('heatPane');
+map.getPane('heatPane').style.zIndex = 450;
+map.getPane('heatPane').style.pointerEvents = 'none';
+
+// OpenStreetMap tiles (CARTO basemaps now require an API key)
+const osmTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 19
+});
+osmTiles.addTo(map);
+map.setView([22, 78], 5);
+
+// ---------- Helpers ----------
+function escapeHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+function distKm(lat1, lng1, lat2, lng2) {
+  const R = 6371, toRad = d => d * Math.PI / 180;
+  const a = Math.sin(toRad(lat2 - lat1) / 2) ** 2 +
+            Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(toRad(lng2 - lng1) / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(a));
+}
+// Golden-angle hue stepping gives well-separated, stable colors.
+function catColor(i) { return `hsl(${Math.round((i * 137.508) % 360)}, 62%, 42%)`; }
+
+const HEAT_GRADIENT = {0.2:'#0b3d91', 0.4:'#0b7b7b', 0.6:'#336600', 0.8:'#b8860b', 1.0:'#7b0000'};
+
+// ---------- State ----------
+let allPlaces = [];
+let catColors = new Map();       // category -> color
+let catNames = [];
+const selectedCats = new Set();  // empty set = all categories
+let heatLayer = null;
+const cluster = L.markerClusterGroup({ disableClusteringAtZoom: 13 });
+let userLoc = null;
+let userMarker = null;
+let nearCircle = null;
+
+// ---------- DOM ----------
+const $ = id => document.getElementById(id);
+const displayMode = $('displayMode'), weightMode = $('weightMode');
+const radiusInput = $('radius'), blurInput = $('blur'), scaleInput = $('scale'), heatOpacity = $('heatOpacity');
+const searchInput = $('search'), nearKmSel = $('nearKm');
+
+function currentOptions() {
+  return { radius: Number(radiusInput.value), blur: Number(blurInput.value),
+           maxZoom: 17, gradient: HEAT_GRADIENT, pane: 'heatPane' };
+}
+
+function weightOf(p) {
+  let w = 1;
+  if (weightMode.value === 'crosslist') w = 1 + 0.6 * (p.categories.length - 1);
+  return w * Number(scaleInput.value);
+}
+
+// ---------- Filtering ----------
+function getQuery() { return searchInput.value.trim().toLowerCase(); }
+
+function filteredPlaces() {
+  const q = getQuery(), nearKm = Number(nearKmSel.value);
+  return allPlaces.filter(p => {
+    if (!p.categories.some(c => selectedCats.has(c))) return false;
+    if (q && !(p.name || '').toLowerCase().includes(q)) return false;
+    if (nearKm && userLoc && distKm(userLoc.lat, userLoc.lng, p.lat, p.lng) > nearKm) return false;
+    return true;
+  });
+}
+
+// ---------- Layer rebuild ----------
+function rebuild(fit) {
+  const pts = filteredPlaces();
+
+  const heatPts = pts.map(p => [p.lat, p.lng, weightOf(p)]);
+  if (heatLayer) { map.removeLayer(heatLayer); heatLayer = null; }
+  heatLayer = L.heatLayer(heatPts, currentOptions());
+  if (displayMode.value === 'heat') {
+    heatLayer.addTo(map);
+    setHeatOpacity();
+  }
+
+  cluster.clearLayers();
+  pts.forEach(p => {
+    const mk = L.circleMarker([p.lat, p.lng], {
+      radius: 6, weight: 1, opacity: 1, fillOpacity: 0.95,
+      color: 'rgba(0,0,0,0.35)',
+      fillColor: catColors.get(p.categories[0]) || '#1976d2'
+    });
+    mk.on('click', () => openDetails(p));
+    cluster.addLayer(mk);
+  });  if (displayMode.value === 'markers') cluster.addTo(map);
+
+  $('count').textContent = `${pts.length.toLocaleString()} / ${allPlaces.length.toLocaleString()} places`;
+  buildLegend(pts.length);
+
+  if (fit && pts.length) {
+    map.fitBounds(L.latLngBounds(pts.map(p => [p.lat, p.lng])).pad(0.1));
+  }
+}
+
+function setHeatOpacity() {
+  if (heatLayer && heatLayer._canvas) heatLayer._canvas.style.opacity = String(heatOpacity.value);
+}
+
+// ---------- Legend ----------
+const legendControl = L.control({ position: 'bottomright' });
+legendControl.onAdd = function () {
+  const div = L.DomUtil.create('div', 'legend');
+  div.id = 'legendBox';
+  return div;
+};
+legendControl.addTo(map);
+
+function buildLegend() {
+  const box = $('legendBox');
+  if (displayMode.value === 'heat') {
+    box.innerHTML = `<div class="legend-title">Density</div>
+      <div class="legend-bar"></div>
+      <div class="legend-labels"><span>low</span><span>high</span></div>
+      <div style="margin-top:4px;color:#888">Weight: ${weightMode.options[weightMode.selectedIndex].text}</div>`;
+  } else {
+    const shown = catNames.filter(c => selectedCats.has(c));
+    const rows = shown.map(c =>
+      `<div class="cat-row"><span class="dot" style="background:${catColors.get(c)}"></span>${escapeHtml(c)}</div>`).join('');
+    box.innerHTML = `<div class="legend-title">Categories</div>${rows}`;
+  }
+}
+
+// ---------- Category panel ----------
+function buildCatPanel() {
+  const panel = $('catPanel');
+  const rows = catNames.map((c, i) => {
+    const n = allPlaces.filter(p => p.categories.includes(c)).length;
+    return `<label class="cat-row"><input type="checkbox" data-cat="${escapeHtml(c)}" checked>
+      <span class="dot" style="background:${catColors.get(c)}"></span>${escapeHtml(c)} <span style="color:#999">(${n})</span></label>`;
+  }).join('');
+  panel.innerHTML = `<div class="cat-links"><a id="catAll">Select all</a><a id="catNone">Select none</a></div>${rows}`;
+
+  panel.querySelectorAll('input[type=checkbox]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      cb.checked ? selectedCats.add(cb.dataset.cat) : selectedCats.delete(cb.dataset.cat);
+      rebuild(true);
+    });
+  });
+  $('catAll').addEventListener('click', () => setAllCats(true));
+  $('catNone').addEventListener('click', () => setAllCats(false));
+}
+
+function setAllCats(on) {
+  selectedCats.clear();
+  if (on) catNames.forEach(c => selectedCats.add(c));
+  document.querySelectorAll('#catPanel input[type=checkbox]').forEach(cb => { cb.checked = on; });
+  rebuild(true);
+}
+
+$('catToggle').addEventListener('click', () => $('catPanel').classList.toggle('open'));
+
+// ---------- Events ----------
+displayMode.addEventListener('change', () => {
+  if (displayMode.value === 'heat') {
+    map.removeLayer(cluster);
+    if (heatLayer) heatLayer.addTo(map);
+    setHeatOpacity();
+  } else {
+    if (heatLayer) map.removeLayer(heatLayer);
+    cluster.addTo(map);
+  }
+  buildLegend();
+});
+weightMode.addEventListener('change', () => { if (displayMode.value === 'heat') rebuild(false); else buildLegend(); });
+
+function updateHeat() {
+  if (!heatLayer) return;
+  const pts = filteredPlaces().map(p => [p.lat, p.lng, weightOf(p)]);
+  map.removeLayer(heatLayer);
+  heatLayer = L.heatLayer(pts, currentOptions());
+  if (displayMode.value === 'heat') { heatLayer.addTo(map); setHeatOpacity(); }
+}
+radiusInput.addEventListener('input', updateHeat);
+blurInput.addEventListener('input', updateHeat);
+scaleInput.addEventListener('input', updateHeat);
+heatOpacity.addEventListener('input', setHeatOpacity);
+
+let searchTimer = null;
+searchInput.addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => rebuild(false), 150);
+});
+nearKmSel.addEventListener('change', () => {
+  if (nearCircle) { map.removeLayer(nearCircle); nearCircle = null; }
+  const km = Number(nearKmSel.value);
+  if (km && userLoc) {
+    nearCircle = L.circle([userLoc.lat, userLoc.lng], { radius: km * 1000,
+      color: '#1976d2', weight: 1.5, dashArray: '4 4', fillOpacity: 0.05 }).addTo(map);
+  }
+  rebuild(false);
+});
+
+$('locateBtn').addEventListener('click', () => {
+  if (!navigator.geolocation) { alert('Geolocation is not supported by this browser.'); return; }
+  $('locateBtn').disabled = true;
+  navigator.geolocation.getCurrentPosition(pos => {
+    userLoc = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+    if (userMarker) map.removeLayer(userMarker);
+    userMarker = L.circleMarker([userLoc.lat, userLoc.lng], {
+      radius: 8, fillColor: '#1976d2', color: '#fff', weight: 2, fillOpacity: 1
+    }).bindPopup('You are here').addTo(map);
+    map.setView([userLoc.lat, userLoc.lng], 8);
+    $('locateBtn').disabled = false;
+    nearKmSel.dispatchEvent(new Event('change'));
+  }, err => {
+    alert('Could not get your location: ' + err.message);
+    $('locateBtn').disabled = false;
+  }, { timeout: 10000 });
+});
+
+$('darkBtn').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
+
+// ---------- Details panel (Wikipedia + Wikimedia Commons, no API key) ----------
+// Google list titles often mix scripts and suffixes — reduce to a searchable name.
+function cleanName(name) {
+  let s = String(name || '').split(/[,|–—]/)[0];
+  s = s.replace(/[^A-Za-z0-9\s'&().-]/g, ' ').replace(/\s+/g, ' ').trim();
+  if (s.length < 3) s = String(name || '').replace(/[^A-Za-z0-9\s'&().-]/g, ' ').trim();
+  return s.slice(0, 80);
+}
+
+// Words that carry no location-specific signal — matching only these means "no match".
+const GENERIC_WORDS = new Set(('temple temples fort forts mandir masjid mosque mosques palace palaces ' +
+  'site sites ancient old ruin ruins cave caves kila qila garh church tomb tombs dargah gurudwara ' +
+  'monument monastery stupa vav baoli bawri stepwell kund lake bridge bridges arch arches gate ghat ' +
+  'tank tower minar chhatri samadhi shrine rock hill statue memorial museum park garden house building ' +
+  'shiva shiv mahadev vishnu laxmi lakshmi narayan narayana hanuman ganesh ganesha ram rama krishna ' +
+  'devi mata parvati durga khandoba mallanna mallikarjuna venkateswara balaji tirupati jagannath ' +
+  'vithoba panduranga ayyappa mahalakshmi padmavati dattatreya guruvayur yallamma yellamma mailar ' +
+  'mailara virabhadra bhadrakali mariamman angalamman ' +
+  'swami baba sant shi sri shri sree ji thakur maharaj rani raja king queen ' +
+  'kingdom north south east west new the and for near').split(' '));
+
+// A text-search match this far from the place (km) is considered a different
+// place that happens to share a name — reject it. Correct matches are almost
+// always within a few km; 25 km leaves generous slack for coordinate drift.
+const MAX_MATCH_KM = 25;
+
+// Titles like "Kapal Kundala (1939 film)" or "X (novel)" are works of art,
+// not places — never match them, even when the name overlaps.
+const NON_PLACE_TITLE = /\((?:19|20)\d\d film\)|\b(?:film|movie|novel|novella|book|song|album|tv series|television series|opera|play|comic|manga)\b/i;
+
+function nameTokens(q) {
+  return q.toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 2);
+}
+function matchScore(title, tokens) {
+  // full-word matching: "kund" must NOT match inside "kundala"
+  const words = new Set(title.toLowerCase().split(/[^a-z0-9]+/));
+  let d = 0, g = 0;
+  tokens.forEach(w => { if (words.has(w)) (GENERIC_WORDS.has(w) ? g++ : d++); });
+  return { d, g };
+}
+// A nearby/shared-distinctive-word match is trustworthy; a text match needs more agreement.
+const okNearby = s => s.d >= 1 || (s.d === 0 && s.g >= 2);
+const okText = s => s.d >= 2 || (s.d >= 1 && s.g >= 1);
+
+async function wikiSummary(q, lat, lng) {
+  const tokens = nameTokens(q);
+  const rank = s => s.d * 2 + s.g;
+
+  async function summary(title) {
+    const sum = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`)
+      .then(r => r.ok ? r.json() : null);
+    if (!sum || sum.type === 'disambiguation' || (!sum.extract && !sum.thumbnail)) return null;
+    return sum;
+  }
+
+  // 1) Articles NEAR the place — proximity disambiguates generic names like "Shiv Mandir".
+  try {
+    const geo = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=geosearch`
+      + `&gscoord=${lat}|${lng}&gsradius=10000&gslimit=10&format=json&origin=*`)
+      .then(r => r.ok ? r.json() : Promise.reject(r.status));
+    const cands = (geo.query && geo.query.geosearch || [])
+      .map(g => ({ title: g.title, distm: g.dist, s: matchScore(g.title, tokens) }))
+      .filter(c => okNearby(c.s) && !NON_PLACE_TITLE.test(c.title))
+      .sort((a, b) => rank(b.s) - rank(a.s) || a.distm - b.distm);
+    for (const c of cands) { const sum = await summary(c.title); if (sum) return sum; }
+  } catch (e) { /* fall through to text search */ }
+
+  // 2) Full-text fallback, with a stricter bar so obscure names match nothing rather than the wrong thing.
+  const searchTitles = async qs => {
+    const out = [];
+    for (const query of qs) {
+      try {
+        const s = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search`
+          + `&srsearch=${encodeURIComponent(query)}&srlimit=10&format=json&origin=*`)
+          .then(r => r.ok ? r.json() : Promise.reject(r.status));
+        (s.query && s.query.search || []).forEach(h => out.push(h.title));
+      } catch (e) { /* try next query */ }
+    }
+    return [...new Set(out)];
+  };
+
+  const dist = tokens.filter(w => !GENERIC_WORDS.has(w));
+  const intitle = [];
+  if (dist.length) {
+    intitle.push(dist.map(w => 'intitle:' + w).join(' '));
+    if (dist.length > 1) intitle.push('intitle:' + dist[0]);
+  }
+  const textCands = (await searchTitles([q, ...intitle]))
+    .map(title => ({ title, s: matchScore(title, tokens) }))
+    .filter(c => okText(c.s) && !NON_PLACE_TITLE.test(c.title))
+    .sort((a, b) => rank(b.s) - rank(a.s));
+
+  // Verify by geography: the matched article must actually be near the place
+  // (a Karachi temple must not match a Maharashtra one). Articles without
+  // coordinates are accepted only on a very strong name match.
+  const coords = await fetchCoords(textCands.map(c => c.title)).catch(() => ({}));
+  const verified = textCands.filter(c => {
+    const co = coords[c.title];
+    if (co) return distKm(co.lat, co.lon, lat, lng) <= MAX_MATCH_KM;
+    return okText(c.s); // no coordinates to check: trust the strict name bar
+  });
+  for (const c of verified) { const sum = await summary(c.title); if (sum) return sum; }
+
+  return null;
+}
+
+// Coordinates of Wikipedia articles, keyed by (normalized) title.
+async function fetchCoords(titles) {
+  if (!titles.length) return {};
+  const d = await fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=coordinates&colimit=max`
+    + `&titles=${titles.map(encodeURIComponent).join('|')}&format=json&origin=*`)
+    .then(r => r.ok ? r.json() : Promise.reject(r.status));
+  const out = {};
+  Object.values(d.query && d.query.pages || {}).forEach(pg => {
+    if (pg.coordinates && pg.coordinates[0]) out[pg.title] = pg.coordinates[0];
+  });
+  return out;
+}
+
+// Photos embedded in the Wikipedia article itself (served from upload.wikimedia.org,
+// which is reliably reachable; avoids direct commons.wikimedia.org API calls).
+async function articleImages(title) {
+  const d = await fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=images`
+    + `&titles=${encodeURIComponent(title)}&imlimit=max&format=json&origin=*`)
+    .then(r => r.ok ? r.json() : Promise.reject(r.status));
+  const files = Object.values(d.query && d.query.pages || {})
+    .flatMap(pg => pg.images || []).map(im => im.title)
+    .filter(t => /\.(jpe?g|png)$/i.test(t) && !/logo|icon|symbol|seal|flag/i.test(t));
+  if (!files.length) return [];
+  const d2 = await fetch(`https://en.wikipedia.org/w/api.php?action=query`
+    + `&titles=${files.slice(0, 12).map(encodeURIComponent).join('|')}`
+    + `&prop=imageinfo&iiprop=url&iiurlwidth=500&format=json&origin=*`)
+    .then(r => r.ok ? r.json() : Promise.reject(r.status));
+  return Object.values(d2.query && d2.query.pages || {})
+    .map(pg => pg.imageinfo && pg.imageinfo[0]).filter(Boolean)
+    .map(ii => ({ thumb: ii.thumburl || ii.url, full: ii.url, page: ii.descriptionurl }));
+}
+
+// Bonus: search Wikimedia Commons directly for more photos.
+async function commonsPhotos(q) {
+  const d = await fetch(`https://commons.wikimedia.org/w/api.php?action=query&generator=search`
+    + `&gsrnamespace=6&gsrsearch=${encodeURIComponent(q)}&gsrlimit=12`
+    + `&prop=imageinfo&iiprop=url&iiurlwidth=500&format=json&origin=*`)
+    .then(r => r.ok ? r.json() : Promise.reject(r.status));
+  return Object.values(d.query && d.query.pages || {})
+    .map(pg => pg.imageinfo && pg.imageinfo[0]).filter(Boolean)
+    .map(ii => ({ thumb: ii.thumburl || ii.url, full: ii.url, page: ii.descriptionurl }));
+}
+
+// Cache per session + localStorage so repeat clicks are instant.
+const detailsCache = new Map();
+function cacheGet(k) {
+  if (detailsCache.has(k)) return detailsCache.get(k);
+  try {
+    const v = localStorage.getItem('he_det7_' + k);
+    if (v) { const p = JSON.parse(v); detailsCache.set(k, p); return p; }
+  } catch (e) { /* storage unavailable */ }
+  return null;
+}
+function cacheSet(k, v) {
+  detailsCache.set(k, v);
+  try { localStorage.setItem('he_det7_' + k, JSON.stringify(v)); } catch (e) { /* ignore */ }
+}
+
+function renderDetails(p, info) {
+  const chips = p.categories.map(c =>
+    `<span class="chip" style="background:${catColors.get(c) || '#888'}">${escapeHtml(c)}</span>`).join('');
+  const note = p.note ? `<div class="popup-note">${escapeHtml(p.note)}</div>` : '';
+  let html = `<div class="popup-name" style="font-size:16px;padding-right:20px">${escapeHtml(p.name)}</div>${chips}${note}`;
+  if (p.url) html += `<div style="margin:8px 0"><a href="${escapeHtml(p.url)}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>`;
+
+  if (info.wiki) {
+    if (info.wiki.extract) html += `<div class="wiki-extract">${escapeHtml(info.wiki.extract)}</div>`;
+    const page = info.wiki.content_urls && info.wiki.content_urls.desktop.page;
+    if (page) html += `<a href="${escapeHtml(page)}" target="_blank" rel="noopener">Read on Wikipedia ↗</a>`;
+  }
+
+  // Google Maps photos take precedence; Wikipedia/Commons fill in otherwise.
+  const g = info.gphotos || [];
+  if (g.length) {
+    html += `<div class="legend-title" style="margin-top:14px">Photos</div><div class="photo-grid">`
+      + g.map(ph =>
+          `<a href="api/photo?ref=${encodeURIComponent(ph.ref)}&w=1600" target="_blank" rel="noopener">`
+          + `<img loading="lazy" src="api/photo?ref=${encodeURIComponent(ph.ref)}&w=500" alt=""></a>`).join('')
+      + `</div>`;
+  } else if (info.photos.length) {
+    html += `<div class="legend-title" style="margin-top:14px">Photos</div><div class="photo-grid">`
+      + info.photos.map(ph =>
+          `<a href="${escapeHtml(ph.page || ph.full)}" target="_blank" rel="noopener"><img loading="lazy" src="${escapeHtml(ph.thumb)}" alt=""></a>`).join('')
+      + `</div><div class="photo-credit">Photos from Wikimedia Commons — click to view the file page.</div>`;
+  }
+  if (!info.wiki && !g.length && !info.photos.length) {
+    html += `<p style="color:#999">No Wikipedia article or photos found for “${escapeHtml(cleanName(p.name))}” — see the map below or the Google Maps link above.</p>`;
+  }
+  // Interactive Google Map of the exact spot (keyless embed). The Layers
+  // button on it switches to Satellite/3D; the marker pins the place.
+  html += `<div class="legend-title" style="margin-top:14px">Map view</div>`
+    + `<iframe class="map-embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"`
+    + ` src="https://www.google.com/maps?q=${p.lat},${p.lng}&z=18&hl=en&output=embed"></iframe>`
+    + `<div class="photo-credit">Interactive Google Map — use the Layers button for Satellite view.</div>`;
+  $('detailsBody').innerHTML = html;
+  // Google's attributions arrive as HTML (they contain credit links, which the
+  // Places API terms require displaying). Rebuild them client-side, keeping
+  // only text and safe <a> tags, so nothing else can be injected.
+  if (g.length && info.gattr && info.gattr.length) {
+    const credit = document.createElement('div');
+    credit.className = 'photo-credit';
+    credit.append('Photos from Google: ');
+    const parsed = new DOMParser().parseFromString(info.gattr.join(' '), 'text/html');
+    [...parsed.body.childNodes].forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        credit.appendChild(document.createTextNode(node.textContent));
+      } else if (node.nodeName === 'A') {
+        const href = node.getAttribute('href') || '';
+        if (/^https?:\/\//i.test(href)) {
+          const a = document.createElement('a');
+          a.href = href;
+          a.textContent = node.textContent;
+          a.target = '_blank';
+          a.rel = 'noopener';
+          credit.appendChild(a);
+        } else {
+          credit.appendChild(document.createTextNode(node.textContent));
+        }
+      }
+    });
+    $('detailsBody').appendChild(credit);
+  }
+}
+
+async function openDetails(p) {
+  $('detailsPanel').classList.add('open');
+  const chips = p.categories.map(c =>
+    `<span class="chip" style="background:${catColors.get(c) || '#888'}">${escapeHtml(c)}</span>`).join('');
+  $('detailsBody').innerHTML =
+    `<div class="popup-name" style="font-size:16px;padding-right:20px">${escapeHtml(p.name)}</div>${chips}`
+    + `<p style="color:#999">Loading details and photos…</p>`;
+
+  const q = cleanName(p.name);
+  let info = cacheGet(q);
+  if (!info) {
+    // Google Maps photos via the local proxy (needs api_key.txt + Places API;
+    // silent no-key fallback below). The cid in the saved URL works as place_id.
+    let gphotos = [], gattr = [];
+    const pidMatch = p.url && p.url.match(/1s(0x[0-9a-fA-F]+:0x[0-9a-fA-F]+)/);
+    if (pidMatch) {
+      try {
+        const r = await fetch(`api/place-photos?pid=${encodeURIComponent(pidMatch[1])}`)
+          .then(r => r.ok ? r.json() : null);
+        if (r && r.photos) { gphotos = r.photos.slice(0, 10); gattr = r.attributions || []; }
+      } catch (e) { /* proxy unavailable — fall back to wiki/commons */ }
+    }
+    const wiki = await wikiSummary(q, p.lat, p.lng).catch(() => null);
+    // Wikipedia/Commons photos only as a fallback when Google has none. A Commons
+    // search on a generic name ("Shiv Mandir") would return photos of a *different*
+    // place, so only fall back to the raw name when it has 2+ distinctive words.
+    let photos = [];
+    if (!gphotos.length) {
+      const distinct = nameTokens(q).filter(w => !GENERIC_WORDS.has(w));
+      const commonsQ = wiki ? wiki.title : (distinct.length >= 2 ? q : null);
+      const [article, extra] = await Promise.all([
+        wiki ? articleImages(wiki.title).catch(() => []) : [],
+        commonsQ ? commonsPhotos(commonsQ).catch(() => []) : [],
+      ]);
+      const seen = new Set();
+      for (const ph of [...article, ...extra]) {
+        if (!seen.has(ph.full)) { seen.add(ph.full); photos.push(ph); }
+      }
+      photos = photos.slice(0, 12);
+    }
+    info = { wiki, photos, gphotos, gattr };
+    cacheSet(q, info);
+  }
+  renderDetails(p, info);
+}
+
+$('detailsClose').addEventListener('click', () => $('detailsPanel').classList.remove('open'));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') $('detailsPanel').classList.remove('open'); });
+
+// ---------- Load data ----------
+const dataFile = 'processed/all.json';
+fetch(dataFile, { cache: 'no-cache' })
+  .then(r => {
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return r.json();
+  })
+  .then(data => {
+    allPlaces = data.filter(p => p.lat && p.lng);
+    catNames = [...new Set(allPlaces.flatMap(p => p.categories))].sort((a, b) => a.localeCompare(b));
+    catNames.forEach((c, i) => catColors.set(c, catColor(i)));
+    catNames.forEach(c => selectedCats.add(c)); // all categories selected by default
+    buildCatPanel();
+    rebuild(true);
+  })
+  .catch(err => {
+    console.error('Failed to load data file', dataFile, err);
+    const info = L.control({ position: 'topright' });
+    info.onAdd = function () {
+      const el = L.DomUtil.create('div', 'legend');
+      el.innerHTML = `<strong>Error loading ${escapeHtml(dataFile)}</strong><br>
+        Serve this folder over HTTP, e.g.<br><code>python3 -m http.server 8000</code><br>then open
+        <code>http://localhost:8000/explorer.html</code>`;
+      return el;
+    };
+    info.addTo(map);
+  });
+</script>
+</body>
+</html>
